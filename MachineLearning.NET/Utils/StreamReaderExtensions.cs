@@ -8,7 +8,7 @@ namespace MachineLearning.NET.Utils
     /// This simple extender permits to get an enumeration out of a StreamReader.
     /// </summary>
     /// <creator>Moreno Carullo</creator>
-    internal static class StreamReaderExtensions
+    public static class StreamReaderExtensions
     {
         public static IEnumerable<string> ToEnumerable(this StreamReader sr)
         {

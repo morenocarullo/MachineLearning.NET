@@ -5,7 +5,6 @@ namespace MachineLearning.NET.Utils
 {
     internal class InstanceBuilderException : Exception, ISerializable
     {
-		
         public InstanceBuilderException() : base()
         {
         }

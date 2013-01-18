@@ -13,7 +13,7 @@ namespace MachineLearning.NET.Utils
     /// </summary>
     /// <creator>Moreno Carullo</creator>
     /// <date>2010/01/08</date>
-    internal static class EnumerableExtensions
+    public static class EnumerableExtensions
     {
         public static void Each<P>(this IEnumerable<P> enumerable, Action<P> action)
         {
