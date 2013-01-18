@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DF0DA45-073E-45B6-BA86-39655A4728D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MachineLearning.NET</RootNamespace>
+    <AssemblyName>MachineLearning.NET</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>StrongKey.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SVM, Version=1.6.2.0, Culture=neutral, PublicKeyToken=472cc2c78a8ce225, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\SVM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classification\BaseClassifier.cs" />
+    <Compile Include="Classification\BaseRBFNClassifier.cs" />
+    <Compile Include="Classification\Classic\ClassicFixedClassifier.cs" />
+    <Compile Include="Classification\Classic\ClassicNearestNeighbor.cs" />
+    <Compile Include="Classification\Classic\MLPClassifier.cs" />
+    <Compile Include="Classification\Classic\NaiveBayesClassifier.cs" />
+    <Compile Include="Classification\Classic\RBFNClassifier.cs" />
+    <Compile Include="Classification\Classic\RocchioClassifier.cs" />
+    <Compile Include="Classification\Classic\SVMClassifier.cs" />
+    <Compile Include="Classification\ClassifierAttribute.cs" />
+    <Compile Include="Classification\ClassifierFactory.cs" />
+    <Compile Include="Classification\ClassifierUtils.cs" />
+    <Compile Include="Classification\FixedClassifier.cs" />
+    <Compile Include="Classification\IClassifier.cs" />
+    <Compile Include="Classification\MultiInstance\CitationNearestNeighbor.cs" />
+    <Compile Include="Classification\MultiInstance\ClassicMultipleInstanceDecorator.cs" />
+    <Compile Include="Classification\MultiInstance\MultiInstanceFixedClassifier.cs" />
+    <Compile Include="Classification\MultiInstance\MultiInstanceNearestNeighbor.cs" />
+    <Compile Include="Classification\MultiInstance\NotBinaryProblemException.cs" />
+    <Compile Include="Classification\MultiInstance\OptimizedCitationNearestNeighbor.cs" />
+    <Compile Include="Classification\MultiInstance\RBFNClassifier.cs" />
+    <Compile Include="Classification\MultiInstance\RuleBasedMultiInstanceClassifier.cs" />
+    <Compile Include="Classification\NearestNeighbor.cs" />
+    <Compile Include="Classification\PredictionExtensions.cs" />
+    <Compile Include="Data\CrossValidationSplitter.cs" />
+    <Compile Include="Data\Distances\DistanceAttribute.cs" />
+    <Compile Include="Data\Distances\DistanceFactory.cs" />
+    <Compile Include="Data\Distances\EMD\EMD.cs" />
+    <Compile Include="Data\Distances\EMD\Features.cs" />
+    <Compile Include="Data\Distances\EMD\FindBasicVariablesException.cs" />
+    <Compile Include="Data\Distances\EMD\findLoopException.cs" />
+    <Compile Include="Data\Distances\EMD\Flow.cs" />
+    <Compile Include="Data\Distances\EMD\IsOptimalException.cs" />
+    <Compile Include="Data\Distances\EMD\node1Content.cs" />
+    <Compile Include="Data\Distances\EMD\node2Content.cs" />
+    <Compile Include="Data\Distances\EMD\Signature.cs" />
+    <Compile Include="Data\Distances\EMD\SignatureSizeException.cs" />
+    <Compile Include="Data\Distances\EMD\SparseBagEMD.cs" />
+    <Compile Include="Data\Distances\Euclidean.cs" />
+    <Compile Include="Data\Distances\IDistance.cs" />
+    <Compile Include="Data\Distances\SparseBagHausdorff.cs" />
+    <Compile Include="Data\Distances\SparseBagMinHausdorff.cs" />
+    <Compile Include="Data\Distances\SparsePatternEuclidean.cs" />
+    <Compile Include="Data\FeatureNormalization.cs" />
+    <Compile Include="Data\IO\DataserWriterFactory.cs" />
+    <Compile Include="Data\IO\DatasetReaderExtensions.cs" />
+    <Compile Include="Data\IO\DatasetReaderFactory.cs" />
+    <Compile Include="Data\IO\IDatasetReader.cs" />
+    <Compile Include="Data\IO\IDatasetWriter.cs" />
+    <Compile Include="Data\IO\OctaveDatasetWriter.cs" />
+    <Compile Include="Data\IO\SNNSDataSet.cs" />
+    <Compile Include="Data\IO\SparseBagReader.cs" />
+    <Compile Include="Data\IO\SparseBagWriter.cs" />
+    <Compile Include="Data\IO\SparseDatasetReader.cs" />
+    <Compile Include="Data\IO\SparseDatasetWriter.cs" />
+    <Compile Include="Data\Patterns\IGenericPattern.cs" />
+    <Compile Include="Data\Patterns\SNNSPattern.cs" />
+    <Compile Include="Data\Patterns\SparseBag.cs" />
+    <Compile Include="Data\Patterns\SparsePattern.cs" />
+    <Compile Include="Evaluation\ComposedQualityEvaluator.cs" />
+    <Compile Include="Evaluation\FMeasureEvaluator.cs" />
+    <Compile Include="Evaluation\IQualityEvaluator.cs" />
+    <Compile Include="Evaluation\MisclassifiedEvaluator.cs" />
+    <Compile Include="Evaluation\OAEvaluator.cs" />
+    <Compile Include="Evaluation\PrecisionEvaluator.cs" />
+    <Compile Include="Evaluation\RecallEvaluator.cs" />
+    <Compile Include="Mapack\CholeskyDecomposition.cs" />
+    <Compile Include="Mapack\EigenvalueDecomposition.cs" />
+    <Compile Include="Mapack\LuDecomposition.cs" />
+    <Compile Include="Mapack\Matrix.cs" />
+    <Compile Include="Mapack\QrDecomposition.cs" />
+    <Compile Include="Mapack\SingularValueDecomposition.cs" />
+    <Compile Include="Optimization\ILMSOptimizer.cs" />
+    <Compile Include="Optimization\LMSOptimizerFactory.cs" />
+    <Compile Include="Optimization\OctavePseudoinverseOptimizer.cs" />
+    <Compile Include="Optimization\OctaveUtil.cs" />
+    <Compile Include="Optimization\PseudoinverseOptimizer.cs" />
+    <Compile Include="Optimization\WidrowHoffOptimizer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regression\MLP\DataSetNotSpecifiedException.cs" />
+    <Compile Include="Regression\MLP\Layer.cs" />
+    <Compile Include="Regression\MLP\Mlp.cs" />
+    <Compile Include="Regression\MLP\Neuron.cs" />
+    <Compile Include="Regression\MLP\StringUtils.cs" />
+    <Compile Include="Regression\MLP\Synapse.cs" />
+    <Compile Include="RuleSystem\EqualTo.cs" />
+    <Compile Include="RuleSystem\GreaterThan.cs" />
+    <Compile Include="RuleSystem\LessThan.cs" />
+    <Compile Include="RuleSystem\Rule.cs" />
+    <Compile Include="RuleSystem\RuleFactory.cs" />
+    <Compile Include="RuleSystem\RuleSet.cs" />
+    <Compile Include="RuleSystem\RuleSetFactory.cs" />
+    <Compile Include="Tool.cs" />
+    <Compile Include="Utils\ConfigurationStringExtensions.cs" />
+    <Compile Include="Utils\ConstructorNotFoundException.cs" />
+    <Compile Include="Utils\EnumerableExtensions.cs" />
+    <Compile Include="Utils\InstanceBuilder.cs" />
+    <Compile Include="Utils\InstanceBuilderException.cs" />
+    <Compile Include="Utils\StreamReaderExtensions.cs" />
+    <Compile Include="Utils\TypeNotFoundException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StrongKey.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
