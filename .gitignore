@@ -1,0 +1,5 @@
+**/bin
+**/obj
+MachineLearning.NET.suo
+MachineLearning.NET.*.user
+_Resharper.*

@@ -6,7 +6,7 @@ namespace MachineLearning.NET.Utils
     /// This extender permits to get a dictionary of parameters out of a configuration string.
     /// </summary>
     /// <creator>Moreno Carullo</creator>
-    internal static class ConfigurationStringExtensions
+    public static class ConfigurationStringExtensions
     {
         public static IDictionary<string, string> GetParamsFromConfigString(this string sConfigString)
         {
